@@ -1,0 +1,16 @@
+
+<div class="new_user_form"/>
+
+  <%= form_for @user do |f| %>
+    <span> What's your email address? &nbsp; &nbsp; </span>
+    <%= f.text_field :email %></br>
+    <span> What's your name? &nbsp; &nbsp; </span>
+    <%= f.text_field :name %></br>
+    <span> Where are you from? &nbsp; &nbsp; </span>
+    <%= f.text_field :country %></br>
+    <span> Please enter a password &nbsp; &nbsp; </span>
+    <%= f.password_field :password %></br>
+    <%= f.submit "create account!" %>
+  <% end %>
+
+</div>
