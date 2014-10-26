@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resource :session
-  resources :users
+
+  resources :users do
+    resources :stories
+  end
 
 end
+
+

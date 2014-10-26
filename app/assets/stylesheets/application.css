@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+.center-container{
+  width: 50%;
+  height: 200px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.top-choice{
+  border: 1px solid black;
+  height: 50px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
