@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   resources :snippets
 
+  resources :citations
+
+  get '/story_form' => 'stories#template'
+
 end
 
 

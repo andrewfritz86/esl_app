@@ -1,14 +1,16 @@
 <h1> Hey <%= @user.name %>! Write a new story here! <h1>
 
-<%= form_for @snippet, url: {:controller => :snippets, action: "create"}, html: {class: "story-form"} do |f| %>
-  <span> Add to your story! </span></br>
-  <%= f.text_area :body, size: "80x10" %></br>
-  <%= hidden_field_tag(:story_id, @story.id) %>
-  <%= submit_tag "Add a snippet", :class => "submit_button" %>
-<% end %>
 
 
-<%= form_tag({:action => 'index'}, {:id => 'add_snippet'}) do %>
+<%= form_tag do %>
   <%= text_field_tag(:input) %>
-  <%= submit_tag("add")%>
+  <%= submit_tag("add", :id=> "add_snippet")%>
+  <!-- maybe something here to pass the id of the current word or the current word itself?
+   so this wil be a text field, but every snippet will get a word as well... maybe ater-->
 <% end %>
+
+<div class="story">
+
+</div>
+
+

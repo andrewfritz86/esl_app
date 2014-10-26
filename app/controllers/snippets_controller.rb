@@ -1,7 +1,7 @@
 class SnippetsController < ApplicationController
 
   def create
-    binding.pry
+    # binding.pry
     render json:
     Snippet.create(snippet_params)
     #here we need to set the snippet's story id and such

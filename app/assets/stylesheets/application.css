@@ -28,3 +28,9 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.story{
+  border: 1px solid black;
+  height: 500px;
+  width: 75%;
+}
