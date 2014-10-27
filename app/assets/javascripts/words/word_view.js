@@ -4,7 +4,6 @@ function WordView(model){
   this.$el = $("<p>");
   this.model = model;
   this.id = model.id;
-  // debugger
 }
 
 

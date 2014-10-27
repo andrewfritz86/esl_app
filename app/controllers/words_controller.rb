@@ -15,6 +15,10 @@ class WordsController < ApplicationController
     new_word.save
   end
 
+  def random
+    @word = random_word
+    render json: {word: @word}
+  end
 
   private
 

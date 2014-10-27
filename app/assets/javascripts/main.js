@@ -33,7 +33,6 @@ eslApp.loadCitations = function(){
 
 eslApp.createWord = function(data){
   var word = new Word(data);//create the model here, we will pass it a hash like ({word: RESPONSE.word, definition: RESPONSE.definition})
-  debugger
   var wordView = new WordView(word).init();//create word view from model, init it
   return word; //return the model for later chaining
 }
@@ -69,13 +68,14 @@ $(function(){
 
   eslApp.$newWord.on("click", function(e){
     console.log("grabbing a new word");
-  key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e"
   $.ajax({
-    url: "http://api.wordnik.com:80/v4/words.json/randomWord?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=" + key,
+    url: "/random_word",
     format: "json",
   }).done(function(data){
     // debugger
+  key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e"
      word = data.word;
+     console.log("off to the api for a definition");
     $.ajax({
       url: "http://api.wordnik.com:80/v4/word.json/"+ word + "/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key="+ key,
       format: "json",
@@ -84,6 +84,7 @@ $(function(){
       //now we have a word and definition, will have
       //to eventually create model and view for those
       eslApp.createWord({word: word, definition: definition}).create();
+      //something here is making it make additoinaly api calls
     })
   })
 

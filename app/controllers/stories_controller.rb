@@ -30,7 +30,7 @@ class StoriesController < ApplicationController
   end
 
   def retrieve
-    binding.pry
+    # binding.pry
     session[:story_id] = params[:previous_story_id]
   end
 
