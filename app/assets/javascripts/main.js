@@ -53,10 +53,9 @@ eslApp.loadWords = function(data){
 
 
 $(function(){
-  console.log("dom loaded succesfully");
-   eslApp.$button = $("#add_snippet");
-   eslApp.$form = $(".story-form");
-   eslApp.$newWord = $(".new-word")
+  eslApp.$button = $("#add_snippet");
+  eslApp.$form = $(".story-form");
+  eslApp.$newWord = $(".new-word")
 
   eslApp.$button.on("click", function(e){
     e.preventDefault();
@@ -66,32 +65,31 @@ $(function(){
     // .create();
   })
 
+  console.log('setting a listener on new word')
   eslApp.$newWord.on("click", function(e){
     console.log("grabbing a new word");
-  $.ajax({
-    url: "/random_word",
-    format: "json",
-  }).done(function(data){
-    // debugger
-  key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e"
-     word = data.word;
-     console.log("off to the api for a definition");
     $.ajax({
-      url: "http://api.wordnik.com:80/v4/word.json/"+ word + "/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key="+ key,
+      url: "/random_word",
       format: "json",
     }).done(function(data){
-      definition = data[0].text
-      //now we have a word and definition, will have
-      //to eventually create model and view for those
-      eslApp.createWord({word: word, definition: definition}).create();
-      //something here is making it make additoinaly api calls
-    })
-  })
-
-  })
-eslApp.loadCitations();
-eslApp.loadWords();
-
+    // debugger
+      key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e";
+      word = data.word;
+      console.log("off to the api for a definition");
+      $.ajax({
+        url: "http://api.wordnik.com:80/v4/word.json/"+ word + "/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key="+ key,
+        format: "json",
+      }).done(function(data){
+        definition = data[0].text
+        //now we have a word and definition, will have
+        //to eventually create model and view for those
+        eslApp.createWord({word: word, definition: definition}).create();
+        //something here is making it make additoinaly api calls
+      });
+    });
+ });
+  eslApp.loadCitations();
+  eslApp.loadWords();
 });
 
 

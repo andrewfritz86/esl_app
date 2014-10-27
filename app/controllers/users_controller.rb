@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   def create
     new_user = User.create(user_params)
     session[:user_id] = new_user.id
-    binding.pry
     redirect_to user_path(new_user)
   end
 
