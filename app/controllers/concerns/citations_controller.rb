@@ -10,6 +10,6 @@ class CitationsController < ApplicationController
   end
 
     def citation_params
-    params.require(:snippet).permit(:body, :story_id)
+    params.require(:citation).permit(:body, :story_id)
   end
 end
