@@ -1,4 +1,4 @@
-class CitationsController < ApplicationController
+  class CitationsController < ApplicationController
 
   def create
     # render json:
@@ -10,6 +10,7 @@ class CitationsController < ApplicationController
 
   def index
     @citations = Story.find(57).citations.all
+    #later here we can have Story.find(session[:current_story_id]).citations.all
     render json: @citations
   end
 

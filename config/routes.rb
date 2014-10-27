@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :snippets
+  resources :words
 
   resources :citations
 

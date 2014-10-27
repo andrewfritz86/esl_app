@@ -6,7 +6,7 @@ var eslApp = {};
 eslApp.citationNum = 0;
 eslApp.citationViews = {};
 
-//
+//citation functions
 
 
 eslApp.createCitation = function(data){
@@ -23,11 +23,32 @@ eslApp.loadCitations = function(){
     url: "/citations", //in the controller, we will get the user id form aprams, run citations on that user, and serve up that users citations for a given story?
     format: "json",
   }).done(function(data){
-    debugger
     for(var i=0; i < data.length; i++){
       eslApp.createCitation(data[i]);
     }
   })
+}
+
+//word functions
+
+eslApp.createWord = function(data){
+  var word = new Word(data);//create the model here, we will pass it a hash like ({word: RESPONSE.word, definition: RESPONSE.definition})
+  // var wordView = new WordView(word).init();//create word view from model, init it
+  return word; //return the model for later chaining
+}
+
+eslApp.loadWords = function(data){
+  //this will probably make a call to the citations controller again, have a variable called words waiting,
+  //or does this go to the words controller? When we create a word and store it, best to store it now with the story ID as a param, can call story.words on a story(have that story ID waiting in sessions?)
+  //how can we assign the current story id to each new word object?
+  $.ajax({
+    url: "/words",
+    format: "json",
+  }).done(function(data){
+    for(i = 0, len = data.length; i < len; i++){
+      eslApp.createWord(data[i]);
+    }
+  });
 }
 
 
@@ -62,18 +83,20 @@ $(function(){
       //now we have a word and definition, will have
       //to eventually create model and view for those
       // debugger
-      wordLi = $("<li>");
-      wordLi.html(word);
-      definitionLi = $("<li>");
-      definitionLi.html(definition);
-      wordLi.appendTo($(".words"));
-      definitionLi.appendTo($(".words"));
+      // wordLi = $("<li>");
+      // wordLi.html(word);
+      // definitionLi = $("<li>");
+      // definitionLi.html(definition);
+      // wordLi.appendTo($(".words"));
+      // definitionLi.appendTo($(".words"));
 
+      eslApp.createWord({word: word, definition: definition}).create();
     })
   })
 
   })
 eslApp.loadCitations();
+eslApp.loadWords();
 
 });
 
