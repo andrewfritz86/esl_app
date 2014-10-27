@@ -11,8 +11,13 @@ class StoriesController < ApplicationController
   def template
     #probably should create a new story here
     @story = Story.create
-    if !session[:new_story_id]
-      session[:new_story_id] = @story.id
+    if params[:previous_story_id]
+    binding.pry
+      session[:story_id] = params[:previous_story_id]
+    end
+
+    if !session[:story_id] && !params[:previous_story_id]
+      session[:story_id] = @story.id
     end
   end
 

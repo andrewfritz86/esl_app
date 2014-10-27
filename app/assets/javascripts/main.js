@@ -33,6 +33,7 @@ eslApp.loadCitations = function(){
 
 eslApp.createWord = function(data){
   var word = new Word(data);//create the model here, we will pass it a hash like ({word: RESPONSE.word, definition: RESPONSE.definition})
+  debugger
   var wordView = new WordView(word).init();//create word view from model, init it
   return word; //return the model for later chaining
 }

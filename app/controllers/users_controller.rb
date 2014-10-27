@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    session[:new_story_id] = nil
+    session[:story_id] = nil
     @user = User.find(session[:user_id])
   end
 
