@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :citations
 
   get '/story_form' => 'stories#template'
+  get '/retrieve' => 'stories#retrieve'
 
 end
 

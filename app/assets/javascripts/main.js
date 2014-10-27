@@ -83,14 +83,6 @@ $(function(){
       definition = data[0].text
       //now we have a word and definition, will have
       //to eventually create model and view for those
-      // debugger
-      // wordLi = $("<li>");
-      // wordLi.html(word);
-      // definitionLi = $("<li>");
-      // definitionLi.html(definition);
-      // wordLi.appendTo($(".words"));
-      // definitionLi.appendTo($(".words"));
-        // debugger
       eslApp.createWord({word: word, definition: definition}).create();
     })
   })
