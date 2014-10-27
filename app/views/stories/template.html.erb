@@ -4,22 +4,42 @@
 
 
 
+
+
 add here
+
+
+<input type="text" id="main"/>
+Title
 <input type="text" id="main"/>
 <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
 <input type="submit" id="add_snippet"/>
-<button class="new-word"> grab a new word </button>
 
+<button class="new-word"> grab a new word </button>
+<h2> My New Story </h2>
 <div class="story">
 
 </div>
-
+<h3> Words in this Story </h3>
 <div class="words">
 </div>
 
 
-<script type="text/template" id="citation-template">
-<p>
-  <%%= citation.body %>
-</p>
+<!-- this doesn't work -->
+<script type="text/template" id="the-list">
+  <p>
+    <%%= word.word %>
+  </P>
 </script>
+
+<script type="text/template" id="citation-template">
+
+  <p>
+    <%%= citation.body %>
+  </p>
+</script>
+
+
+
+
+

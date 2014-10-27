@@ -2,7 +2,8 @@ class WordsController < ApplicationController
 
   def index
     #AJAX get requests comin' in hot, will have to to Story.find(#session[:story_id]).words and serve that up
-    @words = Story.find(57).words.all
+    @words = Word.where(story_id: session[:new_story_id])
+    # binding.pry
     render json: @words
   end
 

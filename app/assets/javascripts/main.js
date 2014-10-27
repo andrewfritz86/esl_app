@@ -33,7 +33,7 @@ eslApp.loadCitations = function(){
 
 eslApp.createWord = function(data){
   var word = new Word(data);//create the model here, we will pass it a hash like ({word: RESPONSE.word, definition: RESPONSE.definition})
-  // var wordView = new WordView(word).init();//create word view from model, init it
+  var wordView = new WordView(word).init();//create word view from model, init it
   return word; //return the model for later chaining
 }
 
@@ -89,7 +89,7 @@ $(function(){
       // definitionLi.html(definition);
       // wordLi.appendTo($(".words"));
       // definitionLi.appendTo($(".words"));
-
+        // debugger
       eslApp.createWord({word: word, definition: definition}).create();
     })
   })
@@ -109,27 +109,3 @@ eslApp.loadWords();
 
 
 
-// $(document).ready(function(){
-//   // debugger
-//   console.log('2. page (DOM) loaded: now running onload...');
-  // var button = $("#add_snippet")
-  // var dur = $(".story-form")
-//   button.on('click',function(e){
-//     e.preventDefault();
-//     $input = $("#main").val()
-//     console.log("didn't post!")
-//     $.ajax({
-//       url: "/citations",
-//       type: "POST",
-//       dataType: "JSON",
-//       data: {snippet: {body: $input}}
-//     }).done(function(data){
-//       $newP = $("<p>");
-//       $newP.text(data.body)
-//       $newP.appendTo($(".story"))
-//       $("#main").val("")
-
-//     })
-//   })
-
-// });

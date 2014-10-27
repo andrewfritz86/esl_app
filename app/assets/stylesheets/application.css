@@ -31,7 +31,15 @@
 
 .story{
   border: 1px solid black;
-  height: 500px;
+  height: 300px;
   width: 75%;
   overflow: scroll;
+}
+
+.words{
+  border: 1px solid black;
+  height: 300px;
+  width: 75%;
+  overflow: scroll;
+
 }

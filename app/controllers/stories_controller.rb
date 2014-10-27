@@ -9,6 +9,16 @@ class StoriesController < ApplicationController
   end
 
   def template
+    #probably should create a new story here
+    @story = Story.create
+    if !session[:new_story_id]
+      session[:new_story_id] = @story.id
+    end
+  end
+
+  def index
+    @user_id = session[:user_id]
+    @stories = Story.where(user_id: @user_id).all
   end
 
 
