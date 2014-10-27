@@ -23,6 +23,7 @@ eslApp.loadCitations = function(){
     url: "/citations", //in the controller, we will get the user id form aprams, run citations on that user, and serve up that users citations for a given story?
     format: "json",
   }).done(function(data){
+    debugger
     for(var i=0; i < data.length; i++){
       eslApp.createCitation(data[i]);
     }
@@ -72,7 +73,7 @@ $(function(){
   })
 
   })
-//eslApp.loadCitations();
+eslApp.loadCitations();
 
 });
 
