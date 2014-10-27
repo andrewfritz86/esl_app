@@ -87,9 +87,11 @@ $(function(){
         //something here is making it make additoinaly api calls
       });
     });
- });
+ })
   eslApp.loadCitations();
   eslApp.loadWords();
+
+
 });
 
 

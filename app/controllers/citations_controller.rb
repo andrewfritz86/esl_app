@@ -8,6 +8,10 @@
     #if statement here to check for story id?
     # binding.pry
     new_citation.save
+    current_story = Story.find(session[:story_id])
+    current_story.title = params[:citation][:title]
+    current_story.save
+    # binding.pry
   end
 
   def index
