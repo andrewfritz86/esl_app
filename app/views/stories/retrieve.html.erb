@@ -1,22 +1,35 @@
-add here
 
 
-<input type="text" id="main"/>
+<div class="body-container">
 
-<input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
-<input type="submit" id="add_snippet"/>
+  <span> Add to your story here! </span>
 
-<button class="new-word"> grab a new word </button>
-<h2> <%=Story.find(params[:previous_story_id]).title %></h2>
-<div class="story">
+
+  <input type="text" id="main"/>
+
+  <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
+  <input type="submit" id="add_snippet"/>
+
+  <button > grab a new word </button>
+  <h2> <%=Story.find(params[:previous_story_id]).title %></h2>
+  <div class="story">
+
+  </div>
+  <h3> Words in this Story </h3>
+  <div class="words">
+  </div>
 
 </div>
-<h3> Words in this Story </h3>
-<div class="words">
-</div>
 
 
-<!-- this doesn't work -->
+
+<!-- remember to add the h2 with the title logic in it!>
+
+  <h2> <Story.find(params[:previous_story_id]).title %></h2>
+
+-->
+
+
 <script type="text/template" id="the-list">
   <p>
     <%%= word.word %>
