@@ -9,8 +9,10 @@
     # binding.pry
     new_citation.save
     current_story = Story.find(session[:story_id])
+    if !current_story.title
     current_story.title = params[:citation][:title]
     current_story.save
+    end
     # binding.pry
   end
 
@@ -29,9 +31,10 @@
     @split = @body.split(" ")
     @new_body = []
     @split.each do |word|
-      word.downcase!
+
       Word.where(story_id: session[:story_id]).each do |second_word|
-        if word == second_word.word
+        if word.downcase == second_word.word
+          #need logic to break punctiation errors
           word = "<span class='special'> #{word} </span>"
         end
       end
