@@ -24,6 +24,26 @@
     render json: @citations
   end
 
+  def match
+    @body = params[:text_body][:currentbody]
+    @split = @body.split(" ")
+    @new_body = []
+    @split.each do |word|
+      word.downcase!
+      Word.where(story_id: session[:story_id]).each do |second_word|
+        if word == second_word.word
+          word = "<span class='special'> #{word} </span>"
+        end
+      end
+        @new_body.push(word)
+    end
+    @new_body = @new_body.join(" ") + "  "
+    # binding.pry
+    @hash = {body: @new_body}
+    render json: @hash
+
+  end
+
 
 
 

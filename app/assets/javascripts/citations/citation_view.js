@@ -11,22 +11,27 @@ CitationView.prototype = {
 
   template: _.template($("#citation-template").html()),
 
-  render: function(){
-    var template = this.template({citation: this.model});
-    this.$el = $(template);
-    return this;
-  },
+  // render: function(){
+  //   return this;
+  // },
 
   init: function(){
+    var currentbody = this.model.body;
+    $.ajax({
+      url: "/highlight",
+      data: {text_body: {currentbody: currentbody}},
+      dataType: "json",
+      context: this,
+    }).done(function(data){
+      console.log(data)
+      orThis = data.body;
+    var template = this.template({citation: this.model});
+    this.$el = $(template);
     var view = this;
-    view.render();
+    this.$el = orThis
     $(".story").append(view.$el);
+    });
     return this;
   }
 
-  // init: function(){
-  //   // debugger;
-  //   this.$el.html(this.model.body)
-  //   this.$el.appendTo($(".story"))
-  // }
 }

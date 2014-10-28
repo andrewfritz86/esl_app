@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/story_form' => 'stories#template'
   get '/retrieve' => 'stories#retrieve'
   get '/random_word' => 'words#random'
+  get '/highlight' => 'citations#match'
 
 end
 
