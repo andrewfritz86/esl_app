@@ -53,16 +53,19 @@ eslApp.loadWords = function(data){
 
 
 $(function(){
+
+  //faders
+  $("#test p").addClass("load")
+  $("h2").addClass("load")
+  //load DOM elements we might be hitting frequently
   eslApp.$button = $("#add_snippet");
   eslApp.$form = $(".story-form");
   eslApp.$newWord = $(".new-word")
-
   eslApp.$button.on("click", function(e){
     e.preventDefault();
     var citationBody = $("#main").val();
     $("#main").val("");
     eslApp.createCitation({body: citationBody}).create(); //later we will ahve to pass word, user id,etc
-    // .create();
   })
 
   console.log('setting a listener on new word')
@@ -72,7 +75,6 @@ $(function(){
       url: "/random_word",
       format: "json",
     }).done(function(data){
-    // debugger
       word = data.word;
       console.log("off to the api for a definition");
       $.ajax({

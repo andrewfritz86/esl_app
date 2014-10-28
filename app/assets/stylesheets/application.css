@@ -10,11 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
 
- *= require bootstrap
  *= require_tree .
  *= require_self
  */
 
+body{
+  background-color: #FDEA4F;
+}
 
 .center-container{
   width: 50%;
@@ -36,6 +38,11 @@
   height: 300px;
   width: 75%;
   overflow: scroll;
+  background-color: white;
+  color:black;
+  font-family: helvetica;
+  border-radius: 10px;
+
 }
 
 .words{
@@ -43,17 +50,63 @@
   height: 300px;
   width: 75%;
   overflow: scroll;
+  background-color: white;
+  color: black;
+  font-family: helvetica;
+  border-radius: 10px;
 
 }
 
 .special{
-  font-size: 35px;
+  font-size: 25px;
+  color: blue;
 }
 
 .body-container{
-  padding-left: 40px;
+  padding-left: 120px;
+  background-color: #343444;
+  color: #FDEA4F;
+  height: 800px;
+  border-radius: 10px;
 }
 
 .header-span{
   padding-left: 40px;
 }
+
+
+h2{
+  padding-left: 200px;
+  opacity:0;
+    -webkit-transition: opacity 1s ease-in;
+       -moz-transition: opacity 1s ease-in;
+        -ms-transition: opacity 1s ease-in;
+         -o-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+
+}
+
+
+#test p {
+    opacity: 0;
+    font-size: 21px;
+    margin-top: 25px;
+    text-align: center;
+
+    -webkit-transition: opacity 1s ease-in;
+       -moz-transition: opacity 1s ease-in;
+        -ms-transition: opacity 1s ease-in;
+         -o-transition: opacity 1s ease-in;
+            transition: opacity 1s ease-in;
+}
+
+#test p.load {
+    opacity: 1;
+}
+
+
+.load {
+  opacity: 1;
+}
+
+
