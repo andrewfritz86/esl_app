@@ -20,6 +20,33 @@ class WordsController < ApplicationController
     render json: {word: @word}
   end
 
+  # def definition
+
+  #   word_array = [
+  #     {"word" => "duck", "definition" => "goes quack"},
+  #     {"word" =>  "house", "definition" => "You live in it"},
+  #     {"word" => "drink", "definition" => "coca cola, for example!"}
+  #   ]
+
+  #   # incoming_word = "duck"
+  #   # word_array.each do |word|
+  #   #   if word["word"] == incoming_word
+  #   #      @definition = word["definition"]
+  #   #   end
+  #   # end
+  #   render json: {definition: @definition}
+  # end
+
+  def grab_definition
+    #make http party request, render back definition
+    #word will have to come over from params
+    key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e"
+    word = "horse" #later this will be dynamic
+    response = HTTParty.get("http://api.wordnik.com:80/v4/word.json/#{word}/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=#{key}")
+    response = response[0]["text"]
+    render json: {definition: response}
+  end
+
   private
 
   def word_params

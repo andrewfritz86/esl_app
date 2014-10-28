@@ -33,6 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'wordnik'
 
 gem 'underscore-rails'
+gem 'httparty'
 
 gem 'rails_12factor', group: :production
 

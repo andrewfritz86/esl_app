@@ -73,14 +73,14 @@ $(function(){
       format: "json",
     }).done(function(data){
     // debugger
-      key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e";
       word = data.word;
       console.log("off to the api for a definition");
       $.ajax({
-        url: "http://api.wordnik.com:80/v4/word.json/"+ word + "/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key="+ key,
+        url: "/definition",
         format: "json",
+        data: {word:{newWord: word}},
       }).done(function(data){
-        definition = data[0].text
+        definition = data.definition
         //now we have a word and definition, will have
         //to eventually create model and view for those
         eslApp.createWord({word: word, definition: definition}).create();

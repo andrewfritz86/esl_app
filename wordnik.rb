@@ -11,3 +11,6 @@ definition = HTTParty.get("http://api.wordnik.com:80/v4/word.json/"+ response + 
 definition = definition[0]["text"]
 puts response
 puts definition
+
+
+"http://api.wordnik.com:80/v4/word.json/computer/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e"
