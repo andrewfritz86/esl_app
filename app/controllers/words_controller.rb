@@ -41,7 +41,7 @@ class WordsController < ApplicationController
     #make http party request, render back definition
     #word will have to come over from params
     key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e"
-    word = "horse" #later this will be dynamic
+    word = params["word"]["newWord"] #later this will be dynamic
     response = HTTParty.get("http://api.wordnik.com:80/v4/word.json/#{word}/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=#{key}")
     response = response[0]["text"]
     render json: {definition: response}
