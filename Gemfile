@@ -34,6 +34,8 @@ gem 'wordnik'
 
 gem 'underscore-rails'
 
+gem 'rails_12factor', group: :production
+
 
 
 
