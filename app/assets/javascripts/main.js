@@ -47,10 +47,13 @@ eslApp.countWords = function(){
 
   if(count <= 5){
     console.log('less than 5')
+    $(".word-phrase").text("Write more!")
     }else if(count > 5 && count < 10){
+    $(".word-phrase").text("getting there")
       console.log('between 5 and 10')
     }else{
       console.log("more than 10")
+    $(".word-phrase").text("alright herman melville")
     }
 
 
