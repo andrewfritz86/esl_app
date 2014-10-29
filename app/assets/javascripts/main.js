@@ -103,7 +103,13 @@ $(function(){
  })
   eslApp.loadCitations();
   eslApp.loadWords();
-  $(".word-count").text("0");
+  $.ajax({
+    url: "/word_count",
+    dataType: "json",
+  }).done(function(){
+  $(".word-count").text(data);
+  })
+  //
 
 
 });

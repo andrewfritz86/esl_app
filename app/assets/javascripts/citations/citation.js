@@ -26,7 +26,7 @@ Citation.prototype.create = function(){
     //change headline
     //drop title bar
   });
-$("h2").text(title);
+$(".title-bar").text(title);
 $("#title").remove();
 }
 
