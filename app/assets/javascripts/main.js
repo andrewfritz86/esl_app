@@ -36,7 +36,7 @@ eslApp.countWords = function(){
     dataType: "json",
   }).done(function(data){
     wordCount = data;
-  $(".word-count").text(data);;
+  $(".count-chocula").text(data);
   var count = parseInt($(".word-count").text());
 
 
@@ -47,13 +47,13 @@ eslApp.countWords = function(){
 
   if(count <= 5){
     console.log('less than 5')
-    $(".word-phrase").text("Write more!")
+    $(".phrase").text("Write more!")
     }else if(count > 5 && count < 10){
-    $(".word-phrase").text("getting there")
+    $(".phrase").text("getting there")
       console.log('between 5 and 10')
     }else{
       console.log("more than 10")
-    $(".word-phrase").text("alright herman melville")
+    $(".phrase").text("alright herman melville")
     }
 
 
@@ -104,7 +104,7 @@ $(function(){
   //load DOM elements we might be hitting frequently
   eslApp.$button = $("#add_snippet");
   eslApp.$form = $(".story-form");
-  eslApp.$newWord = $(".new-word")
+  eslApp.$newWord = $(".new-word-button")
   eslApp.$button.on("click", function(e){
     e.preventDefault();
     var citationBody = $("#main").val();

@@ -18,6 +18,13 @@ body{
 /*  background-color: #FDEA4F;
 */}
 
+/*button {
+  color: #FDEA4F;
+  border: 1px solid #03232E;
+  font-weight: bold;
+
+}*/
+
 
 .top-choice{
   border: 1px solid black;
@@ -46,6 +53,10 @@ body{
 
 }
 
+.title-bar{
+  text-align: center;
+}
+
 .words{
   border: 2px solid #03232E;
   height: 300px;
@@ -65,23 +76,34 @@ body{
   border: 1px solid black;
   margin-left: 100px;
   margin-top: 20px;
-
+  text-align: center;
 }
 
 .word-count{
   height: 150px;
   width: 33%;
   border: 1px solid black;
+  font-size: 40px;
   float: left;
+  background-color: #FDEA4F;
+  color: #343444;
 }
+
+
 
 .new-word-button{
   height: 150px;
   width: 33%;
+  font-size: 23px;
   border: 1px solid black;
+  color: #343444;
+  background-color: #FDEA4F;
   float: right;
 }
-
+.new-word-button:hover {
+  color: #FDEA4F;
+  background: #343444;
+}
 .box-container{
   border: 2px solid #CCCCCC;
   height: 400px;
@@ -96,20 +118,31 @@ body{
   border: 1px solid black;
   float: right;
   margin-right: 1px;
-
+  font-size: 23px;
+  background-color: #FDEA4F;
+  color: #343444;
 }
 
 
 .special{
   font-size: 25px;
   color: blue;
+  font-family: cursive;
 }
 
 .header-span{
-  padding-left: 40px;
+  padding-left: 10px;
 }
 
+li{
+  font-family: verdana;
+}
 
+.definition{
+  font-size: 23px;
+  color: blue;
+  font-family: cursive;
+}
 h2{
   opacity:0;
     -webkit-transition: opacity 1s ease-in;
@@ -142,5 +175,4 @@ h2{
 .load {
   opacity: 1;
 }
-
 

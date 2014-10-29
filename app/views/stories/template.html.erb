@@ -1,13 +1,9 @@
 
 
 <div class="body-container">
-  <span> Add to your story here! </span>
 
   <input type="text" id="main"/>
-  Title
-  <input type="text" id="title" name="title"/>
-  <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
-  <input type="submit" id="add_snippet"/>
+  <span class="add-title">Add a Title</span>
 
 
 
@@ -25,19 +21,30 @@
   <div class="word-score">
 
     <div class="word-count">
+      </br>
+      <div class="count-chocula"></div>
     </div>
 
     <div class="new-word-button">
-      <button class="new-word"> grab a new word </button>
+      </br></br>
+        Grab a new word
     </div>
 
     <div class="word-phrase">
+      </br></br>
+      <div class="phrase">
+      </div>
+
     </div>
 
   </div>
 
 
 
+  <span> Add to your story here! </span>
+  <input type="text" id="title" name="title"/>
+  <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
+  <input type="submit" id="add_snippet"/>
 
 
 </div>
@@ -50,11 +57,12 @@
 
 
 <script type="text/template" id="the-list">
-  <p>
+  <p class="definition">
     <%%= word.word %>
     <li>
     <%%= word.definition %>
     </li>
+    <HR>
   </P>
 </script>
 
