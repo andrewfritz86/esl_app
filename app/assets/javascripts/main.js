@@ -36,10 +36,41 @@ eslApp.countWords = function(){
     dataType: "json",
   }).done(function(data){
     wordCount = data;
-  $(".word-count").text(data);
+  $(".word-count").text(data);;
+  var count = parseInt($(".word-count").text());
+
+
+
+
+
+
+
+  if(count <= 5){
+    console.log('less than 5')
+    }else if(count > 5 && count < 10){
+      console.log('between 5 and 10')
+    }else{
+      console.log("more than 10")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //logic for parseint, etc should be here
      })
 }
-
 
 eslApp.createWord = function(data){
   var word = new Word(data);
@@ -80,7 +111,7 @@ $(function(){
 
   console.log('setting a listener on new word')
   eslApp.$newWord.on("click", function(e){
-    eslApp.countWords();
+    eslApp.countWords();//grabs words for counter
     console.log("grabbing a new word");
     $.ajax({
       url: "/random_word",
@@ -102,6 +133,7 @@ $(function(){
  })
   eslApp.loadCitations();
   eslApp.loadWords();
+  eslApp.countWords();
 
   //
 
