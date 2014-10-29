@@ -29,7 +29,15 @@ CitationView.prototype = {
     this.$el = $(template);
     var view = this;
     this.$el = orThis
-    $(".story").append(view.$el);
+    //this.$el is a bunch of tml right now
+    // $(".story").append(view.$el);
+    //create a new element
+    newDiv = $("<div>"+this.$el+"</div>");
+    newDiv.hide().appendTo(".story").fadeIn(500);
+    //set that element's html to $el
+    //hide it
+
+    // this.$el.hide().appendTo($(".story")).fadeIn(300);
     });
     return this;
   }

@@ -1,46 +1,70 @@
-
-
 <div class="body-container">
 
-  <div class="word-count">
+  <div class="title-container">
+    <span class="add-title">Change the Title</span>
+  </br></br>
+    <input type="text" id="title" name="title"style="width: 300px;" />
   </div>
-  <div class="word-phrase">
+
+
+
+
+
+    <h2 class="title-bar"> <%=Story.find(params[:previous_story_id]).title %> </h2>
+  <div class="box-container">
+    <div class="story">
+
+    </div>
+    <div class="words">
+    </div>
   </div>
-  <span> Add to your story here! </span>
 
+  <div class="word-score">
 
+    <div class="word-count">
+      <div class="count-chocula"></div>
+    </div>
 
-  <input type="text" id="main"/>
+    <div class="new-word-button">
+      </br></br>
+        Grab a New Word
+    </div>
 
-  <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
-  <input type="submit" id="add_snippet"/>
+    <div class="word-phrase">
+      </br></br>
+      <div class="phrase">
+      </div>
 
-  <button class="new-word" > grab a new word </button>
-  <h2> <%=Story.find(params[:previous_story_id]).title %></h2>
-  <div class="story">
+    </div>
 
   </div>
-  <h3> Words in this Story </h3>
-  <div class="words">
+
+
+
+  <div class="story-input">
+    <span class="add-your-story"> Add to your story here! </span></br></br>
+    <input type="text" id="main" style="width: 300px;"/>
+    <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
+    <input type="submit" id="add_snippet" id="submit"/>
   </div>
+
 
 </div>
 
 
 
-<!-- remember to add the h2 with the title logic in it!>
 
-  <h2> <Story.find(params[:previous_story_id]).title %></h2>
 
--->
+
 
 
 <script type="text/template" id="the-list">
-  <p>
-    <%%= word.word %>
+  <p class="definition">
+    <%%= word.word +":" %>
     <li>
     <%%= word.definition %>
     </li>
+    <HR>
   </P>
 </script>
 
@@ -51,3 +75,14 @@
   </p>
 </script>
 
+
+
+
+
+
+
+<!-- remember to add the h2 with the title logic in it!>
+
+  <h2> <Story.find(params[:previous_story_id]).title %></h2>
+
+-->
