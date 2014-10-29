@@ -15,16 +15,9 @@
  */
 
 body{
-/*  background-color: #FDEA4F;*/
-}
+/*  background-color: #FDEA4F;
+*/}
 
-
-/*.center-container{
-  width: 50%;
-  height: 200px;
-  margin: 0 auto;
-  border: 1px solid black;
-}*/
 
 .top-choice{
   border: 1px solid black;
@@ -35,7 +28,7 @@ body{
 }
 
 .story{
-  border: 2px solid #CCCCCC;
+  border: 2px solid #03232E;
   height: 300px;
   width: 50%;
   overflow: scroll;
@@ -44,17 +37,17 @@ body{
   font-family: helvetica;
   border-radius: 10px;
   float: left;
-  margin-right: 25px;
-  margin-left: 15px;
+  margin-right: 35px;
+  margin-left: 35px;
   padding-left: 20px;
-  font-size: 25px;
+/*  padding-top: 10px;
+*/  font-size: 25px;
   margin-top: 40px;
 
 }
 
 .words{
-  border: 2px solid #CCCCCC;
-  padding-left: 20px;
+  border: 2px solid #03232E;
   height: 300px;
   width: 35%;
   overflow: scroll;
@@ -63,6 +56,30 @@ body{
   font-family: helvetica;
   border-radius: 10px;
   margin-top: 40px;
+  padding-left: 10px;
+}
+
+.word-score{
+  height: 150px;
+  width: 75%;
+  border: 1px solid black;
+  margin-left: 100px;
+  margin-top: 20px;
+
+}
+
+.word-count{
+  height: 150px;
+  width: 33%;
+  border: 1px solid black;
+  float: left;
+}
+
+.new-word-button{
+  height: 150px;
+  width: 33%;
+  border: 1px solid black;
+  float: right;
 }
 
 .box-container{
@@ -73,21 +90,21 @@ body{
   border-radius: 5px;
 }
 
+.word-phrase{
+  height: 150px;
+  width: 33%;
+  border: 1px solid black;
+  float: right;
+  margin-right: 1px;
+
+}
+
+
 .special{
   font-size: 25px;
   color: blue;
 }
 
-
-
-/*.body-container{
-  padding-left: 120px;
-  background-color: #343444;
-  color: #FDEA4F;
-  height: 800px;
-  border-radius: 10px;
-}
-*/
 .header-span{
   padding-left: 40px;
 }
