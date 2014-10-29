@@ -1,11 +1,16 @@
-This will be a profile page for <%= @user.name %>
+</br></br></br></br></br></br></br>
+
+<h2 class="greeting"> Hi, <%= @user.name %>.</h2>
 <div class="center-container">
 
   <div class="top-choice">
+  </br>
     <span data-no-turbolink> <%= link_to("Write a new story", "/story_form")  %></span>
   </div>
+</br></br>
 
   <div class="top-choice">
+  </br>
     <span><%= link_to("See all my stories", user_stories_path(@user)) %> </span>
   </div>
 

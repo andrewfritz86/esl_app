@@ -28,10 +28,12 @@ body{
 
 .top-choice{
   border: 1px solid black;
-  height: 50px;
+  height: 70px;
   width: 50%;
   margin: 0 auto;
   text-align: center;
+  font-family: helvetica;
+  font-size: 20px;
 }
 
 .story{
@@ -103,8 +105,40 @@ body{
   text-align: center;
 }
 
+.greeting{
+  text-align: center;
+}
+
 .title-container{
   text-align: center;
+}
+
+.old-story{
+  text-align: center;
+}
+
+.past-stories{
+  text-align: center;
+}
+
+.stories-index-header{
+  text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+    font-family: helvetica;
+}
+
+a:visited {
+    text-decoration: none;
+    font-family: helvetica;
+    color: black;
+}
+
+a:hover {
+    color: #FF00FF;
 }
 
 

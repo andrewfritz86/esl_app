@@ -1,3 +1,7 @@
-<% @stories.each do |story| %>
-<span data-no-turbolink> <%= link_to(story.title, "/retrieve?previous_story_id=#{story.id}") %></br> </span>
-<%end%>
+
+<h2 class="stories-index-header"> Check Out Past Stories </h2>
+<div class="past-stories">
+  <% @stories.each do |story| %>
+  <span class="old-story" data-no-turbolink> <%= link_to(story.title, "/retrieve?previous_story_id=#{story.id}") %></br> </span>
+  <%end%>
+</div>
