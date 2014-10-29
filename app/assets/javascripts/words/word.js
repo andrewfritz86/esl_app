@@ -11,6 +11,17 @@ function Word(data){
 
 //prototype methods for CRUD
 
+
+Word.prototype.count = function(){
+    $.ajax({
+      url: "/word_count",
+      dataType: "json",
+    }).done(function(data){
+      wordCount = data;
+    $(".word-count").text(data);
+       })
+  },
+
 Word.prototype.create = function(){
 
   $.ajax({
@@ -26,7 +37,7 @@ Word.prototype.create = function(){
     }
   }).done(function(data){
     this.id = data.id
-  })
+  });
 }
 
 //add rest of crud later, let's just try this

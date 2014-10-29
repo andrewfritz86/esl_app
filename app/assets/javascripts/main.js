@@ -30,19 +30,19 @@ eslApp.loadCitations = function(){
 }
 
 //word functions
-
-eslApp.wordCount = function(data){
-    $.ajax({
-      url: "/word_count",
-      dataType: "json",
-    }).done(function(data){
-      wordCount = data;
-    $(".word-count").text(data + 1);
-       })
+eslApp.countWords = function(){
+  $.ajax({
+    url: "/word_count",
+    dataType: "json",
+  }).done(function(data){
+    wordCount = data;
+  $(".word-count").text(data);
+     })
 }
 
+
 eslApp.createWord = function(data){
-  var word = new Word(data);//create the model here, we will pass it a hash like ({word: RESPONSE.word, definition: RESPONSE.definition})
+  var word = new Word(data);
   var wordView = new WordView(word).init();//create word view from model, init it
   return word; //return the model for later chaining
 }
@@ -80,7 +80,7 @@ $(function(){
 
   console.log('setting a listener on new word')
   eslApp.$newWord.on("click", function(e){
-    eslApp.wordCount();
+    eslApp.countWords();
     console.log("grabbing a new word");
     $.ajax({
       url: "/random_word",
@@ -96,19 +96,13 @@ $(function(){
         definition = data.definition
         //now we have a word and definition, will have
         //to eventually create model and view for those
-        eslApp.createWord({word: word, definition: definition}).create();
-        //something here is making it make additoinaly api calls
-      });
+        eslApp.createWord({word: word, definition: definition}).create();        //something here is making it make additoinaly api calls
+      })
     });
  })
   eslApp.loadCitations();
   eslApp.loadWords();
-  $.ajax({
-    url: "/word_count",
-    dataType: "json",
-  }).done(function(){
-  $(".word-count").text(data);
-  })
+
   //
 
 
