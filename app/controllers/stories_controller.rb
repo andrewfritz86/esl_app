@@ -5,6 +5,7 @@ class StoriesController < ApplicationController
   end
 
   def template
+    @word_count = Word.where(story_id: session[:story_id]).size
     unless session[:story_id]
 
       @story = Story.create
