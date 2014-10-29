@@ -35,12 +35,12 @@ body{
 }
 
 .story{
-  border: 1px solid black;
+  border: 2px solid #CCCCCC;
   height: 300px;
   width: 50%;
   overflow: scroll;
   background-color: white;
-  color:black;
+  color:#343444;
   font-family: helvetica;
   border-radius: 10px;
   float: left;
@@ -53,7 +53,8 @@ body{
 }
 
 .words{
-  border: 1px solid black;
+  border: 2px solid #CCCCCC;
+  padding-left: 20px;
   height: 300px;
   width: 35%;
   overflow: scroll;
@@ -65,10 +66,11 @@ body{
 }
 
 .box-container{
-  border: 2px solid black;
+  border: 2px solid #CCCCCC;
   height: 400px;
   width: 75;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .special{
