@@ -36,7 +36,9 @@ eslApp.countWords = function(){
     dataType: "json",
   }).done(function(data){
     wordCount = data;
-  $(".count-chocula").text(data);
+    $(".ohgod").remove();
+  $("<p class='ohgod'>"+data+"</p>").hide().appendTo(".count-chocula").fadeIn(800);
+  // $(".count-chocula").text(data);
   var count = parseInt($(".word-count").text());
 
 

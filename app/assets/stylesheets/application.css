@@ -35,13 +35,12 @@ body{
 }
 
 .story{
-  border: 1px solid #03232E;
+  border: 2px solid #03232E;
   height: 300px;
   width: 50%;
   overflow: scroll;
   background-color: white;
   font-family: helvetica;
-  border-radius: 10px;
   float: left;
   margin-right: 35px;
   margin-left: 35px;
@@ -54,19 +53,30 @@ body{
 
 .title-bar{
   text-align: center;
+  font-family: Helvetica;
+  font-size: 36px;
+}
+
+.add-your-story{
+  font-size: 20px;
+  font-family: Helvetica;
 }
 
 .words{
-  border: 1px solid #03232E;
+  border: 2px solid #03232E;
   height: 300px;
   width: 35%;
   overflow: scroll;
   background-color: white;
   color: black;
   font-family: helvetica;
-  border-radius: 10px;
   margin-top: 40px;
   padding-left: 10px;
+}
+
+.add-title{
+  font-size: 20px;
+  font-family: Helvetica;
 }
 
 .word-score{
@@ -112,11 +122,11 @@ body{
   background: black;
 }
 .box-container{
-  border: 1px solid black;
+  border: 2px solid black;
   height: 400px;
   width: 75;
   margin-top: 20px;
-  border-radius: 5px;
+/*  border-radius: 5px;*/
 }
 
 .word-phrase{

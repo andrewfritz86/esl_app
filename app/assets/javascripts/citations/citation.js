@@ -28,6 +28,7 @@ Citation.prototype.create = function(){
   });
 $(".title-bar").text(title);
 $("#title").remove();
+$(".add-title").remove();
 }
 
 

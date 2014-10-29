@@ -1,7 +1,7 @@
 console.log("word views linked!")
 
 function WordView(model){
-  this.$el = $("<p>");
+  this.$el = $("<p class='experiment'>");
   this.model = model;
   this.id = model.id;
 }
@@ -19,6 +19,7 @@ WordView.prototype = {
 
   init: function(){
     this.render();
+    //change class
     $(".words").append(this.$el);
     return this;
   },
