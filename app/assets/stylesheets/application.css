@@ -25,6 +25,13 @@ body{
 
 }*/
 
+.new-user-form{
+  width: 450px;
+}
+
+.sign-in-form{
+  width: 450px;
+}
 
 .top-choice{
   border: 1px solid black;
@@ -50,8 +57,9 @@ body{
 /*  padding-top: 10px;
 */  font-size: 25px;
   margin-top: 40px;
-
 }
+
+.login-input { float: right; clear: both; }
 
 .title-bar{
   text-align: center;
@@ -181,7 +189,8 @@ a:hover {
 }
 
 .header-span{
-  padding-left: 10px;
+  padding-left: 5px;
+  font-family: helvetica;
 }
 
 li{
@@ -220,19 +229,34 @@ h2{
     opacity: 1;
 }
 
-#submit {
- color: #fff;
- font-size: 0;
- width: 135px;
- height: 60px;
- border: none;
- margin: 0;
- padding: 0;
- background: #0c0 url(image) 0 0 no-repeat;
-}
 
 
 .load {
   opacity: 1;
 }
 
+
+.submitb{
+  width:70px;
+  height:40px;
+  background-color: white;
+  color:black;
+  border: 1px solid black;
+  margin-left: 10px;
+  font-family: Helvetica;
+  font-size:20px;
+}
+
+.login-button{
+  width:70px;
+  height:30px;
+  background-color: white;
+  color:black;
+  border: 1px solid black;
+  font-family: Helvetica;
+  font-size:15px;
+}
+
+.helvetica{
+  font-family: Helvetica;
+}
