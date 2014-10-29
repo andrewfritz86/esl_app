@@ -15,15 +15,16 @@
  */
 
 body{
-  background-color: #FDEA4F;
+/*  background-color: #FDEA4F;*/
 }
 
-.center-container{
+
+/*.center-container{
   width: 50%;
   height: 200px;
   margin: 0 auto;
   border: 1px solid black;
-}
+}*/
 
 .top-choice{
   border: 1px solid black;
@@ -36,25 +37,38 @@ body{
 .story{
   border: 1px solid black;
   height: 300px;
-  width: 75%;
+  width: 50%;
   overflow: scroll;
   background-color: white;
   color:black;
   font-family: helvetica;
   border-radius: 10px;
+  float: left;
+  margin-right: 25px;
+  margin-left: 15px;
+  padding-left: 20px;
+  font-size: 25px;
+  margin-top: 40px;
 
 }
 
 .words{
   border: 1px solid black;
   height: 300px;
-  width: 75%;
+  width: 35%;
   overflow: scroll;
   background-color: white;
   color: black;
   font-family: helvetica;
   border-radius: 10px;
+  margin-top: 40px;
+}
 
+.box-container{
+  border: 2px solid black;
+  height: 400px;
+  width: 75;
+  margin-top: 20px;
 }
 
 .special{
@@ -62,21 +76,22 @@ body{
   color: blue;
 }
 
-.body-container{
+
+
+/*.body-container{
   padding-left: 120px;
   background-color: #343444;
   color: #FDEA4F;
   height: 800px;
   border-radius: 10px;
 }
-
+*/
 .header-span{
   padding-left: 40px;
 }
 
 
 h2{
-  padding-left: 200px;
   opacity:0;
     -webkit-transition: opacity 1s ease-in;
        -moz-transition: opacity 1s ease-in;
