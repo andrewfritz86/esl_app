@@ -15,7 +15,7 @@
  */
 
 body{
-/*  background-color: #FDEA4F;
+/*  background-color: #ECFC6D;
 */}
 
 /*button {
@@ -35,12 +35,11 @@ body{
 }
 
 .story{
-  border: 2px solid #03232E;
+  border: 1px solid #03232E;
   height: 300px;
   width: 50%;
   overflow: scroll;
   background-color: white;
-  color:#343444;
   font-family: helvetica;
   border-radius: 10px;
   float: left;
@@ -58,7 +57,7 @@ body{
 }
 
 .words{
-  border: 2px solid #03232E;
+  border: 1px solid #03232E;
   height: 300px;
   width: 35%;
   overflow: scroll;
@@ -77,6 +76,7 @@ body{
   margin-left: 100px;
   margin-top: 20px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .word-count{
@@ -85,10 +85,17 @@ body{
   border: 1px solid black;
   font-size: 40px;
   float: left;
-  background-color: #FDEA4F;
-  color: #343444;
+/*  background-color: #FF9A52;
+*/  color: #343444;
 }
 
+.story-input{
+  text-align: center;
+}
+
+.title-container{
+  text-align: center;
+}
 
 
 .new-word-button{
@@ -96,16 +103,16 @@ body{
   width: 33%;
   font-size: 23px;
   border: 1px solid black;
-  color: #343444;
-  background-color: #FDEA4F;
+  color: #black;
+  background-color: #white;
   float: right;
 }
 .new-word-button:hover {
-  color: #FDEA4F;
-  background: #343444;
+  color: white;
+  background: black;
 }
 .box-container{
-  border: 2px solid #CCCCCC;
+  border: 1px solid black;
   height: 400px;
   width: 75;
   margin-top: 20px;
@@ -119,15 +126,14 @@ body{
   float: right;
   margin-right: 1px;
   font-size: 23px;
-  background-color: #FDEA4F;
-  color: #343444;
+/*  background-color: #FF9A52;
+*/  color: black;
 }
 
 
 .special{
   font-size: 25px;
-  color: blue;
-  font-family: cursive;
+  color: #6EFF00;
 }
 
 .header-span{
@@ -140,8 +146,7 @@ li{
 
 .definition{
   font-size: 23px;
-  color: blue;
-  font-family: cursive;
+  color: #6EFF00;
 }
 h2{
   opacity:0;
@@ -169,6 +174,17 @@ h2{
 
 #test p.load {
     opacity: 1;
+}
+
+#submit {
+ color: #fff;
+ font-size: 0;
+ width: 135px;
+ height: 60px;
+ border: none;
+ margin: 0;
+ padding: 0;
+ background: #0c0 url(image) 0 0 no-repeat;
 }
 
 

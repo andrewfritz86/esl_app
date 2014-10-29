@@ -2,8 +2,10 @@
 
 <div class="body-container">
 
-  <input type="text" id="main"/>
-  <span class="add-title">Add a Title</span>
+  <div class="title-container">
+    <span class="add-title">Add a Title</span>
+    <input type="text" id="title" name="title"/>
+  </div>
 
 
 
@@ -41,10 +43,12 @@
 
 
 
-  <span> Add to your story here! </span>
-  <input type="text" id="title" name="title"/>
-  <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
-  <input type="submit" id="add_snippet"/>
+  <div class="story-input">
+    <span> Add to your story here! </span></br></br>
+    <input type="text" id="main" style="width: 300px;"/>
+    <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
+    <input type="submit" id="add_snippet" id="submit"/>
+  </div>
 
 
 </div>
