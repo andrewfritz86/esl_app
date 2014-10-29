@@ -114,7 +114,7 @@ body{
   font-size: 23px;
   border: 1px solid black;
   color: black;
-  background-color: #white;
+  background-color: white;
   float: right;
 }
 .new-word-button:hover {
