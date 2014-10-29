@@ -31,6 +31,16 @@ eslApp.loadCitations = function(){
 
 //word functions
 
+eslApp.wordCount = function(data){
+    $.ajax({
+      url: "/word_count",
+      dataType: "json",
+    }).done(function(data){
+      wordCount = data;
+    $(".word-count").text(data + 1);
+       })
+}
+
 eslApp.createWord = function(data){
   var word = new Word(data);//create the model here, we will pass it a hash like ({word: RESPONSE.word, definition: RESPONSE.definition})
   var wordView = new WordView(word).init();//create word view from model, init it
@@ -70,6 +80,7 @@ $(function(){
 
   console.log('setting a listener on new word')
   eslApp.$newWord.on("click", function(e){
+    eslApp.wordCount();
     console.log("grabbing a new word");
     $.ajax({
       url: "/random_word",
@@ -92,6 +103,7 @@ $(function(){
  })
   eslApp.loadCitations();
   eslApp.loadWords();
+  $(".word-count").text("0");
 
 
 });

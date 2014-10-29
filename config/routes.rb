@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/random_word' => 'words#random'
   get '/definition' => 'words#grab_definition'
   get '/highlight' => 'citations#match'
+  get '/word_count' => 'words#word_count'
 
 
 end

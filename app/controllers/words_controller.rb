@@ -25,6 +25,11 @@ class WordsController < ApplicationController
     render json: {definition: response}
   end
 
+  def word_count
+    @word_count = Word.where(story_id: session[:story_id]).size
+    render json: @word_count
+  end
+
   private
 
   def word_params

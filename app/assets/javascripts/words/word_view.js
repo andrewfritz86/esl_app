@@ -13,16 +13,27 @@ WordView.prototype = {
   //error again here. looks like the template isn't loaded yet
 
   render: function(){
-
     var template = this.template({word: this.model});
     this.$el = template;
     return this
   },
 
   init: function(){
+
     this.render();
     $(".words").append(this.$el);
     return this;
-  }
+  },
+
+  // count: function(){
+  //   $.ajax({
+  //     url: "/word_count",
+  //     dataType: "json",
+  //   }).done(function(data){
+  //     wordCount = data;
+  //   $(".word-count").text(data);
+  //      })
+
+  // }
 
 }
