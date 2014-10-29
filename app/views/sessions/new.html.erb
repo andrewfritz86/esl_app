@@ -3,9 +3,9 @@
   <h2 class='sign-in'> Sign in! </h2>
     <%= form_tag(session_path) do %>
       <span class="helvetica">Enter your email </span> &nbsp; &nbsp;
-      <%= text_field_tag(:email) %></br>
+      <%= text_field_tag :email, nil, :class => 'login-input' %></br>
       <span class='helvetica'>Enter your password</span> &nbsp; &nbsp;
-      <%= text_field_tag(:password) %></br></br>
+      <%= password_field_tag :password , nil, :class => 'login-input' %></br></br>
       <%= button_tag 'Login', :class => 'login-button'  %>
     <% end %>
 </br>

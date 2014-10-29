@@ -59,7 +59,7 @@ body{
   margin-top: 40px;
 }
 
-input { float: right; clear: both; }
+.login-input { float: right; clear: both; }
 
 .title-bar{
   text-align: center;
@@ -189,7 +189,8 @@ a:hover {
 }
 
 .header-span{
-  padding-left: 10px;
+  padding-left: 5px;
+  font-family: helvetica;
 }
 
 li{
