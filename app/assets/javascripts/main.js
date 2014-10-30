@@ -47,6 +47,7 @@ eslApp.countWords = function(){
 
 
 
+
   if(count <= 5){
     console.log('less than 5')
     $(".phrase").text("Stephanie Meyer")
