@@ -131,6 +131,7 @@ class ApplicationController < ActionController::Base
         "joy",
         "doctor",
         "medicine",
+        "stomp"
         ]
   words.sample
   end
