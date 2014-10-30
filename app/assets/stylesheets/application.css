@@ -182,6 +182,14 @@ a:hover {
 */  color: black;
 }
 
+.ohgod{
+  color: #FF00FF;
+}
+
+.before-word{
+  padding-top: 30px;
+  font-size: 26px;
+}
 
 .special{
   font-size: 20px;
@@ -195,6 +203,11 @@ a:hover {
 
 li{
   font-family: verdana;
+}
+
+.count-span{
+  float: left;
+  font-size: 33px;
 }
 
 .definition{
