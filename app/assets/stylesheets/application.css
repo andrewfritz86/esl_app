@@ -25,6 +25,20 @@ body{
 
 }*/
 
+.welcome-box{
+  height: 250px;
+  width: 75%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.splash-fade{
+  font-family: Helvetica;
+  font-size: 20px;
+  text-align: center;
+}
+
+
 .new-user-form{
   width: 450px;
 }
@@ -194,6 +208,11 @@ a:hover {
 .special{
   font-size: 20px;
   color: #6EFF00;
+}
+
+.highlight{
+  color: #6EFF00;
+
 }
 
 .header-span{

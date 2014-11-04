@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get '/definition' => 'words#grab_definition'
   get '/highlight' => 'citations#match'
   get '/word_count' => 'words#word_count'
-
+  get '/splash' => 'welcome#splash'
 
 end
 
