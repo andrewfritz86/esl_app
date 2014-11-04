@@ -73,7 +73,6 @@ eslApp.loadWords = function(data){
 
 $(function(){
 
-  console.log('test');
 
   //faders
   $("#test p").addClass("load")

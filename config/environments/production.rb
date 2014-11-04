@@ -69,6 +69,7 @@ Rails.application.configure do
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
+  config.assets.raise_production_errors = true
 
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
