@@ -69,7 +69,6 @@ Rails.application.configure do
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
-  config.action_dispatch.x_sendfile_header = ‘X-Accel-Redirect’
 
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
