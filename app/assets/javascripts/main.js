@@ -12,9 +12,7 @@ eslApp.citationViews = {};
 eslApp.createCitation = function(data){
   var citation = new Citation(data);
   var citationView = new CitationView(citation)
-  // debugger
   citationView = citationView.init();
-  //eslApp.pushView(citationView)
   return citation;
 }
 
@@ -38,15 +36,7 @@ eslApp.countWords = function(){
     wordCount = data;
     $(".ohgod").remove();
   $("<p class='ohgod'>"+data+"</p>").hide().appendTo(".count-chocula").fadeIn(800);
-  // $(".count-chocula").text(data);
   var count = parseInt($(".word-count").text());
-
-
-
-
-
-
-
 
   if(count <= 5){
     console.log('less than 5')
@@ -59,25 +49,7 @@ eslApp.countWords = function(){
     $(".phrase").text("Herman Melville")
     }else{
       $(".phrase").text("TOLSTOY")
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //logic for parseint, etc should be here
+  }
      })
 }
 
@@ -88,9 +60,6 @@ eslApp.createWord = function(data){
 }
 
 eslApp.loadWords = function(data){
-  //this will probably make a call to the citations controller again, have a variable called words waiting,
-  //or does this go to the words controller? When we create a word and store it, best to store it now with the story ID as a param, can call story.words on a story(have that story ID waiting in sessions?)
-  //how can we assign the current story id to each new word object?
   $.ajax({
     url: "/words",
     format: "json",
@@ -115,7 +84,7 @@ $(function(){
     e.preventDefault();
     var citationBody = $("#main").val();
     $("#main").val("");
-    eslApp.createCitation({body: citationBody}).create(); //later we will ahve to pass word, user id,etc
+    eslApp.createCitation({body: citationBody}).create();
   })
 
   console.log('setting a listener on new word')
@@ -134,9 +103,7 @@ $(function(){
         data: {word:{newWord: word}},
       }).done(function(data){
         definition = data.definition
-        //now we have a word and definition, will have
-        //to eventually create model and view for those
-        eslApp.createWord({word: word, definition: definition}).create();        //something here is making it make additoinaly api calls
+        eslApp.createWord({word: word, definition: definition}).create();
       })
     });
  })

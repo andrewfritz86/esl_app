@@ -7,7 +7,6 @@ function Citation(data){
 }
 
 Citation.prototype.create = function(){
-  // debugger
   var title = $("#title").val();
 
   $.ajax({
@@ -18,20 +17,13 @@ Citation.prototype.create = function(){
     data:{citation: {
             body: this.body,
             title: $("#title").val(),
-            //will have to put other params in here later
     }
   }
   }).done(function(data){
     this.id = data.id;
-    //change headline
-    //drop title bar
   });
 $(".title-bar").text(title);
 $("#title").remove();
 $(".add-title").remove();
 }
 
-
-//update coming later
-
-//destroy coming later

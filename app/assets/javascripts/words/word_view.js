@@ -19,11 +19,8 @@ WordView.prototype = {
 
   init: function(){
     this.render();
-    //change class
     wordDiv = $("<div>"+this.$el+"</div>");
     wordDiv.hide().appendTo(".words").fadeIn(500);
-
-    // $(".words").append(this.$el);
     return this;
   },
 

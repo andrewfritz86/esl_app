@@ -11,10 +11,6 @@ CitationView.prototype = {
 
   template: _.template($("#citation-template").html()),
 
-  // render: function(){
-  //   return this;
-  // },
-
   init: function(){
     var currentbody = this.model.body;
     $.ajax({
@@ -29,15 +25,8 @@ CitationView.prototype = {
     this.$el = $(template);
     var view = this;
     this.$el = orThis
-    //this.$el is a bunch of tml right now
-    // $(".story").append(view.$el);
-    //create a new element
     newDiv = $("<div>"+this.$el+"</div>");
     newDiv.hide().appendTo(".story").fadeIn(500);
-    //set that element's html to $el
-    //hide it
-
-    // this.$el.hide().appendTo($(".story")).fadeIn(300);
     });
     return this;
   }

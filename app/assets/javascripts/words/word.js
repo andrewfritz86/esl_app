@@ -32,7 +32,6 @@ Word.prototype.create = function(){
     data: {
       word: {definition: this.definition,
             word: this.word,
-            //probably wtill have example line soon
           }
     }
   }).done(function(data){
@@ -40,4 +39,3 @@ Word.prototype.create = function(){
   });
 }
 
-//add rest of crud later, let's just try this
