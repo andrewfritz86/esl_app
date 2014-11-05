@@ -16,5 +16,6 @@
 //= require underscore
 //= require turbolinks
 //= require bootstrap
+//= require splash
 //= require main.js
 //= require_tree .
