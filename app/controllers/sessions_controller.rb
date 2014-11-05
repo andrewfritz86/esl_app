@@ -17,7 +17,6 @@ class SessionsController < ApplicationController
       redirect_to(user_path(user))
     else
       flash[:error] = "Sorry! Your password or username is wrong. Please try again!"
-      #need to set up rack-flash
       redirect_to(root_path)
     end
   end

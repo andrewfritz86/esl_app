@@ -6,11 +6,9 @@ class StoriesController < ApplicationController
 
   def template
     unless session[:story_id]
-
       @story = Story.create
       @story.user_id = session[:user_id]
       @story.save
-
       if !session[:story_id]
         session[:story_id] = @story.id
       end
@@ -23,7 +21,6 @@ class StoriesController < ApplicationController
   end
 
   def retrieve
-    # binding.pry
     session[:story_id] = params[:previous_story_id]
   end
 
