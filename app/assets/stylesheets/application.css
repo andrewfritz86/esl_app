@@ -213,6 +213,7 @@ a:hover {
 
 li{
   font-family: verdana;
+  font-size: 0.75em;
 }
 
 .count-span{
@@ -221,7 +222,7 @@ li{
 }
 
 .definition{
-  font-size: 23px;
+  font-size: 1em;
   color: #6EFF00;
 }
 h2{
