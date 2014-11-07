@@ -25,8 +25,10 @@
     @split.each do |new_word|
 
       Word.where(story_id: session[:story_id]).each do |second_word|
+        binding.pry
         if new_word.downcase == second_word.word
-          #scan logic h
+          #scan logic here. new_word.downcase.scan(second_word.word)
+          #this will return an array
           new_word = "<span class='special'> #{new_word} </span>"
         end
       end
