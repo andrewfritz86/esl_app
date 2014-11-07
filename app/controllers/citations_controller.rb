@@ -19,6 +19,7 @@
   def match
     @body = params[:text_body][:currentbody]
     @split = @body.split(" ")
+    #grab last word , delete all punctuation?
     @new_body = []
     @split.each do |word|
 
