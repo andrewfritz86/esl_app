@@ -32,6 +32,7 @@
     @new_body = @new_body.join(" ") + "  "
     @hash = {body: @new_body}
     render json: @hash
+    ##need to grab last word, remove any punctuation, etc
 
   end
 
