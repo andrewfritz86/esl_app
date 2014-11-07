@@ -21,14 +21,16 @@
     @split = @body.split(" ")
     #grab last word , delete all punctuation?
     @new_body = []
-    @split.each do |word|
+    #rather than simply match, we should use scan
+    @split.each do |new_word|
 
       Word.where(story_id: session[:story_id]).each do |second_word|
-        if word.downcase == second_word.word
-          word = "<span class='special'> #{word} </span>"
+        if new_word.downcase == second_word.word
+          #scan logic h
+          new_word = "<span class='special'> #{new_word} </span>"
         end
       end
-        @new_body.push(word)
+        @new_body.push(new_word)
     end
     @new_body = @new_body.join(" ") + "  "
     @hash = {body: @new_body}
