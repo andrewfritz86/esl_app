@@ -13,6 +13,11 @@ eslApp.createCitation = function(data){
   var citation = new Citation(data);
   var citationView = new CitationView(citation)
   citationView = citationView.init();
+  //debugger  
+  // if(S(citationView.model.body).contains)
+  // will eventually need an if statement here, use String.js and a loop
+  //can also be done in the controller with ajax as well if need be.
+  eslApp.countWords();
   return citation;
 }
 
@@ -29,6 +34,7 @@ eslApp.loadCitations = function(){
 
 //word functions
 eslApp.countWords = function(){
+  //should we put some kind of logic here where we scan the citation to make sure the word is used?
   $.ajax({
     url: "/word_count",
     dataType: "json",
@@ -43,7 +49,6 @@ eslApp.countWords = function(){
 eslApp.createWord = function(data){
   var word = new Word(data);
   var wordView = new WordView(word).init();//create word view from model, init it
-  eslApp.countWords();
   return word; //return the model for later chaining
 }
 
