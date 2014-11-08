@@ -19,16 +19,10 @@
   def match
     @body = params[:text_body][:currentbody]
     @split = @body.split(" ")
-    #grab last word , delete all punctuation?
     @new_body = []
-    #rather than simply match, we should use scan
     @split.each do |new_word|
-
       Word.where(story_id: session[:story_id]).each do |second_word|
-        binding.pry
-        if new_word.downcase == second_word.word
-          #scan logic here. new_word.downcase.scan(second_word.word)
-          #this will return an array
+        if new_word.downcase.include?(second_word.word)
           new_word = "<span class='special'> #{new_word} </span>"
         end
       end
@@ -37,10 +31,7 @@
     @new_body = @new_body.join(" ") + "  "
     @hash = {body: @new_body}
     render json: @hash
-    ##need to grab last word, remove any punctuation, etc
-
   end
-
 
 
 
