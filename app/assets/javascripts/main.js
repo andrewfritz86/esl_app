@@ -40,10 +40,10 @@ eslApp.countWords = function(){
 
   if(count <= 5){
     console.log('less than 5')
-    $(".phrase").text("Stephanie Meyer")
+    $(".phrase").text("Keep Writing!")
     }else if(count > 5 && count < 10){
-    $(".phrase").text("Stephen King")
-      console.log('between 5 and 10')
+    $(".phrase").text("Not Bad!")
+      console.log('')
     }else if(count >= 10 && count < 15){
       console.log("more than 10")
     $(".phrase").text("Herman Melville")
