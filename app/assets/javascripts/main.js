@@ -37,25 +37,13 @@ eslApp.countWords = function(){
     $(".ohgod").remove();
   $("<p class='ohgod'>"+data+"</p>").hide().appendTo(".count-chocula").fadeIn(800);
   var count = parseInt($(".word-count").text());
-
-  if(count <= 5){
-    console.log('less than 5')
-    $(".phrase").text("Keep Writing!")
-    }else if(count > 5 && count < 10){
-    $(".phrase").text("Not Bad!")
-      console.log('')
-    }else if(count >= 10 && count < 15){
-      console.log("more than 10")
-    $(".phrase").text("Herman Melville")
-    }else{
-      $(".phrase").text("TOLSTOY")
-  }
      })
 }
 
 eslApp.createWord = function(data){
   var word = new Word(data);
   var wordView = new WordView(word).init();//create word view from model, init it
+  eslApp.countWords();
   return word; //return the model for later chaining
 }
 
@@ -90,7 +78,7 @@ $(function(){
 
   console.log('setting a listener on new word')
   eslApp.$newWord.on("click", function(e){
-    eslApp.countWords();//grabs words for counter
+    // eslApp.countWords();//grabs words for counter
     console.log("grabbing a new word");
     $.ajax({
       url: "/random_word",
