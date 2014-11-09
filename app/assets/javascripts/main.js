@@ -22,6 +22,12 @@ eslApp.createCitation = function(data){
   return citation;
 }
 
+eslApp.wordScore = function(data){
+  //what if we define the word score as a separate function that runs
+  //after a citation is created?
+}
+
+
 eslApp.loadCitations = function(){
   $.ajax({
     url: "/citations", //in the controller, we will get the user id form aprams, run citations on that user, and serve up that users citations for a given story?
