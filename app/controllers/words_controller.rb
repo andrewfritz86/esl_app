@@ -16,6 +16,14 @@ class WordsController < ApplicationController
     render json: {word: @word}
   end
 
+  def score
+    #need to take each word for the story and check it against
+    #each citation for the story
+    binding.pry
+    #@count = something
+    #render json: {count: @count}
+  end
+
 
   def grab_definition
     key = "64e90a58d89a8e7f3f000001fe809d0cd55d32cb45b9f117e"

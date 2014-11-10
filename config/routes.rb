@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get '/highlight' => 'citations#match'
   get '/word_count' => 'words#word_count'
   get '/login' => 'welcome#login'
+  get '/wordscore' => 'words#score'
 
 end
 

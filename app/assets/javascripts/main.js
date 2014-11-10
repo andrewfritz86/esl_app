@@ -25,6 +25,13 @@ eslApp.createCitation = function(data){
 eslApp.wordScore = function(data){
   //what if we define the word score as a separate function that runs
   //after a citation is created?
+  $.ajax({
+    url:'/wordscore',
+    format: "json",
+  }).done(function(data){
+    //send back number from rails
+    //update wordscore on DOM with said number
+  })
 }
 
 
