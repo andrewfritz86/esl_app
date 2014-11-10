@@ -18,18 +18,22 @@ eslApp.createCitation = function(data){
   // will eventually need an if statement here, use String.js and a loop
   //can also be done in the controller with ajax as well if need be.
   //capture body of citation, send back to controller, run it against words in story so far(scan or include again)
-  eslApp.countWords();
-  // eslApp.wordscore();
+  // eslApp.countWords();
+  eslApp.wordScore();
   return citation;
 }
 
-eslApp.wordScore = function(data){
+eslApp.wordScore = function(){
   //what if we define the word score as a separate function that runs
   //after a citation is created?
   $.ajax({
     url:'/wordscore',
     format: "json",
   }).done(function(data){
+    debugger
+    var count = data.count;
+    $(".ohgod").remove();
+    $("<p class='ohgod'>"+count+"</p>").hide().appendTo(".count-chocula").fadeIn(800);
     //send back number from rails
     //update wordscore on DOM with said number
   })
@@ -56,8 +60,8 @@ eslApp.countWords = function(){
   }).done(function(data){
     wordCount = data;
     $(".ohgod").remove();
-  $("<p class='ohgod'>"+data+"</p>").hide().appendTo(".count-chocula").fadeIn(800);
-  var count = parseInt($(".word-count").text());
+    $("<p class='ohgod'>"+data+"</p>").hide().appendTo(".count-chocula").fadeIn(800);
+    var count = parseInt($(".word-count").text());
      })
 }
 

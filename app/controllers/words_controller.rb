@@ -17,11 +17,18 @@ class WordsController < ApplicationController
   end
 
   def score
-    #need to take each word for the story and check it against
-    #each citation for the story
-    # binding.pry
-    #@count = something
-    #render json: {count: @count}
+    @words_for_story = Word.where(story_id: session[:story_id])
+    @citations_for_story = Citation.where(story_id: session[:story_id])
+    @word_count = 0
+    @words_for_story.each do |word_used|
+      @citations_for_story.each do |citation|
+        if citation.body.include?(word_used.word)
+          @word_count += 1
+        end
+      end
+    end
+    binding.pry
+    render json: {count: @word_count}
   end
 
 
