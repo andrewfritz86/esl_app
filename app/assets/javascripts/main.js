@@ -19,6 +19,7 @@ eslApp.createCitation = function(data){
   //can also be done in the controller with ajax as well if need be.
   //capture body of citation, send back to controller, run it against words in story so far(scan or include again)
   eslApp.countWords();
+  // eslApp.wordscore();
   return citation;
 }
 

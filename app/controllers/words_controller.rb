@@ -19,7 +19,7 @@ class WordsController < ApplicationController
   def score
     #need to take each word for the story and check it against
     #each citation for the story
-    binding.pry
+    # binding.pry
     #@count = something
     #render json: {count: @count}
   end
