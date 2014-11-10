@@ -27,7 +27,6 @@ class WordsController < ApplicationController
         end
       end
     end
-    binding.pry
     render json: {count: @word_count}
   end
 

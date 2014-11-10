@@ -19,7 +19,7 @@ eslApp.createCitation = function(data){
   //can also be done in the controller with ajax as well if need be.
   //capture body of citation, send back to controller, run it against words in story so far(scan or include again)
   // eslApp.countWords();
-  eslApp.wordScore();
+  // eslApp.wordScore();
   return citation;
 }
 
@@ -30,7 +30,7 @@ eslApp.wordScore = function(){
     url:'/wordscore',
     format: "json",
   }).done(function(data){
-    debugger
+    // debugger
     var count = data.count;
     $(".ohgod").remove();
     $("<p class='ohgod'>"+count+"</p>").hide().appendTo(".count-chocula").fadeIn(800);
@@ -98,6 +98,9 @@ $(function(){
     var citationBody = $("#main").val();
     $("#main").val("");
     eslApp.createCitation({body: citationBody}).create();
+    eslApp.wordScore();
+
+
   })
 
   console.log('setting a listener on new word')
