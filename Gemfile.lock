@@ -156,7 +156,7 @@ DEPENDENCIES
   jquery-turbolinks
   pg
   pry-rails
-  rails (= 4.1.6)
+  rails
   rails_12factor
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
@@ -165,3 +165,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   underscore-rails
   wordnik
+
+BUNDLED WITH
+   1.10.3
