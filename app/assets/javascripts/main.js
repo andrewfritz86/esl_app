@@ -11,34 +11,24 @@ eslApp.citationViews = {};
 
 eslApp.createCitation = function(data){
   var citation = new Citation(data);
-  var citationView = new CitationView(citation)
+  var citationView = new CitationView(citation);
   citationView = citationView.init();
-  //debugger  
-  // if(S(citationView.model.body).contains)
-  // will eventually need an if statement here, use String.js and a loop
-  //can also be done in the controller with ajax as well if need be.
-  //capture body of citation, send back to controller, run it against words in story so far(scan or include again)
   eslApp.countWords();
-  // eslApp.wordscore();
   return citation;
 }
 
 eslApp.wordScore = function(data){
-  //what if we define the word score as a separate function that runs
-  //after a citation is created?
   $.ajax({
     url:'/wordscore',
     format: "json",
   }).done(function(data){
-    //send back number from rails
-    //update wordscore on DOM with said number
   })
 }
 
 
 eslApp.loadCitations = function(){
   $.ajax({
-    url: "/citations", //in the controller, we will get the user id form aprams, run citations on that user, and serve up that users citations for a given story?
+    url: "/citations",
     format: "json",
   }).done(function(data){
     for(var i=0; i < data.length; i++){
@@ -49,7 +39,6 @@ eslApp.loadCitations = function(){
 
 //word functions
 eslApp.countWords = function(){
-  //should we put some kind of logic here where we scan the citation to make sure the word is used?
   $.ajax({
     url: "/word_count",
     dataType: "json",
@@ -95,8 +84,6 @@ $(function(){
     $("#main").val("");
     eslApp.createCitation({body: citationBody}).create();
   })
-
-  console.log('setting a listener on new word')
   eslApp.$newWord.on("click", function(e){
     // eslApp.countWords();//grabs words for counter
     console.log("grabbing a new word");
@@ -119,9 +106,6 @@ $(function(){
   eslApp.loadCitations();
   eslApp.loadWords();
   eslApp.countWords();
-
-  //
-
 
 });
 

@@ -22,8 +22,8 @@ Citation.prototype.create = function(){
   }).done(function(data){
     this.id = data.id;
   });
-$(".title-bar").text(title);
-$("#title").remove();
-$(".add-title").remove();
+  $(".title-bar").text(title);
+  $("#title").remove();
+  $(".add-title").remove();
 }
 

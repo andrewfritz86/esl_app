@@ -1,4 +1,4 @@
-console.log("citation views linked!")
+console.log("citation views linked!");
 
 function CitationView(model){
   this.$el = $("<p>");
@@ -19,14 +19,13 @@ CitationView.prototype = {
       dataType: "json",
       context: this,
     }).done(function(data){
-      console.log(data)
       orThis = data.body;
-    var template = this.template({citation: this.model});
-    this.$el = $(template);
-    var view = this;
-    this.$el = orThis
-    newDiv = $("<div>"+this.$el+"</div>");
-    newDiv.hide().appendTo(".story").fadeIn(500);
+      var template = this.template({citation: this.model});
+      this.$el = $(template);
+      var view = this;
+      this.$el = orThis
+      newDiv = $("<div>"+this.$el+"</div>");
+      newDiv.hide().appendTo(".story").fadeIn(500);
     });
     return this;
   }
