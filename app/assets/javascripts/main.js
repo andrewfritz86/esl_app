@@ -69,12 +69,8 @@ eslApp.loadWords = function(data){
 
 
 $(function(){
-
-
-  //faders
   $("#test p").addClass("load")
   $("h2").addClass("load")
-  //load DOM elements we might be hitting frequently
   eslApp.$button = $("#add_snippet");
   eslApp.$form = $(".story-form");
   eslApp.$newWord = $(".new-word-button")
@@ -85,14 +81,11 @@ $(function(){
     eslApp.createCitation({body: citationBody}).create();
   })
   eslApp.$newWord.on("click", function(e){
-    // eslApp.countWords();//grabs words for counter
-    console.log("grabbing a new word");
     $.ajax({
       url: "/random_word",
       format: "json",
     }).done(function(data){
       word = data.word;
-      console.log("off to the api for a definition");
       $.ajax({
         url: "/definition",
         format: "json",
