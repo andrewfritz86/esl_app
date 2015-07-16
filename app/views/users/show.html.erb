@@ -1,17 +1,16 @@
-</br></br></br></br></br></br></br>
 
-<h2 class="greeting"> Hi, <%= @user.name %>.</h2>
-<div class="center-container">
 
-  <div class="top-choice">
-  </br>
-    <span data-no-turbolink> <%= link_to("Write a new story", "/story_form")  %></span>
+
+
+<div class="container">
+  <div class="row">
+    <div class="two columns"></div>
+    <div class="eight columns">
+      <h3> Hi, <%= @user.name %>.</h3>
+      <span data-no-turbolink> <%= link_to("Write a new story", "/story_form")  %></span>
+      </br>
+      <span><%= link_to("See all my stories", user_stories_path(@user)) %> </span>
+    </div>
+    <div class="two columns"></div>
   </div>
-</br></br>
-
-  <div class="top-choice">
-  </br>
-    <span><%= link_to("See all my stories", user_stories_path(@user)) %> </span>
-  </div>
-
 </div>

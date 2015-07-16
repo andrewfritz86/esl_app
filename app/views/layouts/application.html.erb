@@ -6,13 +6,17 @@
 </head>
 <body>
 
-<div class="container">
-	<div class="row">
-	  <h1> <%= link_to( "logout",session_path, method: 'delete') %>
-	    <span data-no-turbolink> <%= link_to( "my profile","/users/#{session[:user_id]}") %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;   <a href="/">StoryBuilder</a></span>
-	  </h1>
-	</div>
-</div>
+  <div class="container" style="border-bottom: 1px solid black;">
+    <div class="row">
+      <div class="four columns"></div>
+      <div class="eight columns">
+        <h3> <span> <%= link_to( "logout",session_path, method: 'delete') %></span> <span data-no-turbolink> <%= link_to( "my profile","/users/#{session[:user_id]}") %></span> <span><a href="/">StoryBuilder</a></span>
+        </h3>
+      </div>
+    </div>
+  </div>
+</br>
+
 <%= yield %>
 
 </body>

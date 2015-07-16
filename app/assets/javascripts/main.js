@@ -45,7 +45,7 @@ eslApp.countWords = function(){
   }).done(function(data){
     wordCount = data;
     $(".ohgod").remove();
-  $("<p class='ohgod'>"+data+"</p>").hide().appendTo(".count-chocula").fadeIn(800);
+  $("<h4 class='ohgod'>"+data+"</h4>").hide().appendTo(".count-chocula").fadeIn(800);
   var count = parseInt($(".word-count").text());
      })
 }

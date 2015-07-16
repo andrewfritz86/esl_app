@@ -1,53 +1,46 @@
 
 
-<div class="body-container">
-
-  <div class="title-container">
-    <span class="add-title">Change the Title</span>
-  </br></br>
-    <input type="text" id="title" name="title"style="width: 300px;" />
-  </div>
+<div class="container">
 
 
-
-
-
-    <h2 class="title-bar"> My New Story </h2>
-  <div class="box-container">
-    <div class="story">
-
+  <div class="row">
+    <div class="six columns">
+      <h4 class="add-title title-bar">Change the Title</h4>
+      <input type="text" id="title" name="title"style="width: 300px;" />
     </div>
-    <div class="words">
+    <div class="six columns">
+      <h4 class="add-your-story"> Add to your story here! </h4>
+      <input type="text" id="main" style="width: 300px;"/>
+      <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
+      <button type="submit" id="add_snippet" class="submitb" value="submit"/>Add </button>
     </div>
   </div>
 
-  <div class="word-score">
+  <h4 class="title-bar"> My New Story </h4>
 
-    <div class="word-count">
+  <div class="row" style="border: 1px solid black;">
+    <div class="six columns story">
+    </div>
+    <div class="six columns words" style="border-left: 1px solid black; margin-left 10px; height: 300px; overflow: auto;">
+    </div>
+  </div>
+  </br>
+
+  <div class="row word-score">
+    <div class="six columns word-count">
+      <h5> Your Score: </h5>
       <div class="count-chocula"></div>
     </div>
-
-    <div class="new-word-button">
-      </br></br>
-        Grab a New Word
+    <div class="six columns new-word-button" style="padding-left: 10px; padding-top: 10px;">
+      <h5> Grab a New Word!</h5>
     </div>
-
-
-
-
   </div>
-
-
-
-  <div class="story-input">
-    <span class="add-your-story"> Add to your story here! </span></br></br>
-    <input type="text" id="main" style="width: 300px;"/>
-    <input type="hidden" id="token" value="<%= form_authenticity_token %>" name="token"/>
-    <button type="submit" id="add_snippet" class="submitb" value="submit"/>Add </button>
-  </div>
-
-
+  
 </div>
+
+
+
+
 
 
 

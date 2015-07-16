@@ -1,15 +1,33 @@
 
-<div class="sign-in-form">
-  <h2 class='sign-in'> Sign in! </h2>
-    <%= form_tag(session_path) do %>
-      <span class="helvetica">Enter your email </span> &nbsp; &nbsp;
-      <%= text_field_tag :email, nil, :class => 'login-input' %></br>
-      <span class='helvetica'>Enter your password</span> &nbsp; &nbsp;
-      <%= password_field_tag :password , nil, :class => 'login-input' %></br></br>
-      <%= button_tag 'Login', :class => 'login-button'  %>
-    <% end %>
-</br>
-  <div>
-    <span class="helvetica"> New user? <%= link_to('Sign Up!', new_user_path) %> </span>
+<div class="container">
+  <div class="row">
+    <div class="two columns"></div>
+    <div class="eight columns">
+      <h5> Sign in! </h5>
+      <%= form_tag(session_path) do %>
+        <span class="helvetica">Enter your email </span> &nbsp; &nbsp;
+        <%= text_field_tag :email, nil, :class => 'login-input' %></br>
+        <span class='helvetica'>Enter your password</span> &nbsp; &nbsp;
+        <%= password_field_tag :password , nil, :class => 'login-input' %></br></br>
+        <%= button_tag 'Login'%>
+      <% end %>
+    </div>
   </div>
+
+</br>
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="two columns"></div>
+    <div class="eight columns">
+      <span> New user? <%= link_to('Sign Up!', new_user_path) %> </span>
+    </div>
+    <div class="two columns"></div>
+  </div>
+
 </div>

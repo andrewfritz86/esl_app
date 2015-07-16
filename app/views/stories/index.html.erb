@@ -1,5 +1,5 @@
 
-<h2 class="stories-index-header"> Check Out Past Stories </h2>
+<h4> Check Out Past Stories </h4>
 <div class="past-stories">
   <% @stories.each do |story| %>
   <span class="old-story" data-no-turbolink> <%= link_to(story.title, "/retrieve?previous_story_id=#{story.id}") %></br> </span>
