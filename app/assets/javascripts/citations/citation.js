@@ -1,5 +1,3 @@
-console.log("citations linked!")
-
 
 function Citation(data){
   this.id = data.id;

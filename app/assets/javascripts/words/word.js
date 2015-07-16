@@ -1,15 +1,10 @@
-console.log("word.js linked!")
 
 
-//word object constructor
 function Word(data){
   this.id = data.id;
-  this.word = data.word;//check params for this
-  this.definition = data.definition;//can use || statements here if needed
+  this.word = data.word;
+  this.definition = data.definition;
 }
-
-
-//prototype methods for CRUD
 
 
 Word.prototype.count = function(){

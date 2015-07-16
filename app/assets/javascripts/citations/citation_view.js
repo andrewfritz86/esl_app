@@ -1,4 +1,3 @@
-console.log("citation views linked!");
 
 function CitationView(model){
   this.$el = $("<p>");

@@ -1,4 +1,3 @@
-console.log("word views linked!");
 
 function WordView(model){
   this.$el = $("<p class='experiment'>");
